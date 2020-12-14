@@ -12,7 +12,7 @@ def hello():
 @app.route('/send', methods=['POST'])
 def send_email():
 	#req_data = request.get_json()
-	msg = request.args.get('language')
+	msg = request.args.get('message')
 	email = request.args.get('email')
 	try:
 		publish_message(msg, email)
@@ -21,4 +21,4 @@ def send_email():
 		return {"status": 500, "error": e}
 
 if __name__ == '__main__':
-	app.run(port=5000)
+	app.run(host='0.0.0.0', debug=True, port=80)
