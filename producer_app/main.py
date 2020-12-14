@@ -30,7 +30,7 @@ def get_msg(text_msg, email):
 	kafka_msg = {
 		"id": msg_id,
 		"key": str(msg_key),
-		"data": {"text": text_msg, "otp": otp, "email": email, "mobile": "+919765895056"}
+		"data": {"text": text_msg, "otp": otp, "email": email, "mobile": "+9112121212"}
 	}
 	print("Kafka Message: {}".format(kafka_msg))
 	m = json.dumps(kafka_msg)
